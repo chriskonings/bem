@@ -1,7 +1,7 @@
 #BEM
 A talk on the BEM naming convention.
 
-##[GitHub Pages Link](https://chriskonings.github.iobem/)
+##[GitHub Pages Link](https://chriskonings.github.io/bem/)
 
 ##This presentation was made with [Reveal.js](http://lab.hakim.se/reveal-js/)
 
