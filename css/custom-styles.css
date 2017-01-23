@@ -1,0 +1,106 @@
+
+/* Reveal Styles Over-ride */
+
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: #000; }
+
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: #000; }
+
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #000; }
+
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: #000; }
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #000;
+}
+
+.reveal a {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #efefef;
+  text-shadow: none;
+  border: none; }
+
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #000; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #000; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #000; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #000; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #efefef; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #efefef; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #efefef; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #efefef; }
+
+
+.reveal section img {
+    margin: 15px 0px;
+    background: none;
+    border: 0px solid #222;
+    box-shadow:none;
+}
+
+/* Custom Styles */
+
+.align-left{
+  text-align: left;
+}
+
+.watermark{
+  margin: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  z-index: 9999;
+}
+
+.watermark__title{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 5px auto;
+  font-size: 20px;
+}
+
+.watermark__link{
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin: 5px auto;
+  font-size: 20px;
+  transition: color ease 0.1s;
+}
+
+.watermark__link:hover{
+  color: #efefef;
+}

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>BEM</title>
+
+		<link rel="stylesheet" href="./css/reveal.css">
+		<link rel="stylesheet" href="./css/theme/white.css">
+    <link rel="stylesheet" href="./css/custom-styles.css">
+
+	</head>
+
+	<body>
+
+    <div class="watermark">
+      <span class="watermark__title">Chris 'Konings' Ingham</span>
+      <a href="mailto:cingham@uk.ibm.com" target="_blank" class="watermark__link">cingham@uk.ibm.com</a>
+      <a href="http://twitter.com/chriskonings" target="_blank" class="watermark__link">@chriskonings</a>
+    </div>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+  	    <section>
+          <h1>BEM</h1>
+        </section>
+
+        <section>
+          <h1>What?</h1>
+          <div class="fragment" data-fragment-index="1">
+            Front-End Methodology/Convention
+          </div>
+          <div class="fragment" data-fragment-index="2">
+            <blockquote>
+              <b>B</b>lock, <b>E</b>lement, <b>M</b>odifier
+            </blockquote>
+          </div>
+  			</section>
+
+        <section>
+          <section data-transition="slide">
+            <h1>Block</h1>
+            <em class="fragment" data-fragment-index="1">
+            An Independent Page Component - simple or compound (containing other blocks).
+          </em>
+          </section>
+          <section>
+            <h2>Basic Block Structures</h2>
+          </section>
+          <section data-transition="slide">
+            <h3>Nested</h3>
+            <em class="fragment" data-fragment-index="1">
+            Block-ception.
+            </em>
+            <div class="fragment" data-fragment-index="2">
+              <img width="600px" src="./img/nested-structure.png">
+            </div>
+          </section>
+          <section>
+            <h3>Arbitrary</h3>
+            <div class="fragment" data-fragment-index="1">
+            Blocks can move around a page without losing functionality or appearance.
+            </div>
+            <div class="fragment" data-fragment-index="2">
+              <img width="600px" src="./img/arbitary-placement.png">
+            </div>
+            <div class="fragment" data-fragment-index="3">
+              <img width="600px" src="./img/arbitary-placement-2.png">
+            </div>
+          </section>
+          <section>
+            <h3>Re-Usable</h3>
+            <div class="fragment" data-fragment-index="1">
+            Blocks can be repeated within one page.
+            </div>
+            <div class="fragment" data-fragment-index="2">
+              <img width="600px" src="./img/re-use.png">
+            </div>
+          </section>
+  			</section>
+
+        <section>
+          <section>
+            <h1>Element</h1>
+            <div class="fragment" data-fragment-index="1">
+              A child of the Block.
+            </div>
+          </section>
+          <section data-transition="slide">
+            <img width="600px" src="./img/element.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Modifier</h1>
+            <div class="fragment" data-fragment-index="1">
+              Defines the appearance or behaviour of a block or element.
+            </div>
+          </section>
+          <section data-transition="slide">
+            <img width="600px" src="./img/modifier.png">
+          </section>
+        </section>
+
+
+        <section>
+          <h1>Why?</h1>
+          <div class="fragment" data-fragment-index="1">
+            <blockquote cite="Brian Turley, on the JSJ Podcast">
+              &ldquo;Discipline is your only defence in terms of maintainability&rdquo;
+            </blockquote>
+          </div>
+  			</section>
+
+        <section>
+          <section data-transition="slide">
+            <h1>How?</h1>
+          </section>
+          <section data-transition="slide">
+            <h2>
+              HTML
+            </h2>
+            <pre>
+              <code style="font-size: 18px;">
+                &#60;div class="block"&#62;
+                  &#60;div class="block__element"&#62;
+                  &#60;/div&#62;
+                  &#60;div class="block__element block__element--modifier"&#62;
+                  &#60;/div&#62;
+                &#60;/div&#62;
+              </code>
+            </pre>
+          </section>
+          <section data-transition="slide">
+            <h2>
+              CSS
+            </h2>
+            <pre>
+              <code>
+                .block{}
+                .block__element{}
+                .block__element--modifier{}
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section data-transition="slide">
+            <h1>So...</h1>
+          </section>
+
+          <section data-transition="slide">
+            <h2>HTML</h2>
+            <pre>
+              <code>
+                &#60;ul class="list"&#62;
+                  &#60;li class="list__item"&#62;
+                  &#60;/li&#62;
+                  &#60;li class="list__item list__item--active"&#62;
+                  &#60;/li&#62;
+                &#60;/ul&#62;
+              </code>
+            </pre>
+          </section>
+
+          <section data-transition="slide">
+            <pre>
+              <code>
+                .list{
+                  display: block;
+                }
+                .list__item{
+                  color: #000;
+                }
+                .list__item--active{
+                  color: #ffc0cb;
+                }
+              </code>
+            </pre>
+          </section>
+
+          <section data-transition="slide">
+            <h2>
+              Elements Within Elements
+            </h2>
+          </section>
+          <section data-transition="slide">
+            <h2>Wrong</h2>
+            <pre>
+              <code>
+                &#60;ul class="list"&#62;
+                  &#60;li class="list__item"&#62;
+                    &#60;a class="list__item__link"&#62;
+                    &#60;/a&#62;
+                  &#60;/li&#62;
+                &#60;/ul&#62;
+              </code>
+            </pre>
+          </section>
+          <section data-transition="slide">
+            <h2>Right</h2>
+            <em>Ensures an element can be swapped around, removed or added without modifying existing code.</em>
+            <pre>
+              <code>
+                &#60;ul class="list"&#62;
+                  &#60;li class="list__item"&#62;
+                    &#60;a class="list__alink"&#62;
+                    &#60;/a&#62;
+                  &#60;/li&#62;
+                &#60;/ul&#62;
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section data-transition="slide">
+            <h1>Pre-Processors</h1>
+            <em>If you're in to that sort of thing :)</em>
+          </section>
+          <section data-transition="slide">
+            <h3>Sass/Less</h3>
+            <pre>
+              <code>
+                .block {
+                  // block styles
+                  &__element{
+                    // element styles
+                    &--modifier {
+                      // modifier styles
+                    }
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+          <section data-transition="slide">
+            <em>Psuedo-classes</em>
+            <pre>
+              <code>
+                .block {
+                  // block styles
+                  &__element{
+                    // element styles
+                    &--modifier {
+                      // modifier styles
+                    }
+                    &:hover{
+                      //pseudo-class styles
+                    }
+                  }
+                }
+              </code>
+            </pre>
+          </section>
+      </section>
+
+        <section>
+          <p>
+            Resources
+          </p>
+          <ul>
+            <li>
+              <a href="http://getbem.com/naming/" target="_blank">Get BEM</a>
+            </li>
+            <li>
+              <a href="https://en.bem.info/" target="_blank">BEM by Yandex</a>
+            </li>
+            <li>
+              <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">MindBEMding</a>
+            </li>
+            <li>
+              <a href="http://bem.github.io/bem-method/html/all.en.html" target="_blank">BEM Method</a>
+            </li>
+            <li>
+              <a href="http://frontendbabel.info/articles/bem-with-css-preprocessors/" target="_blank">Generating BEM Selectors with CSS Pre-Processors</a>
+            </li>
+            <li>
+              <a href="http://alwaystwisted.com/articles/2014-02-27-even-easier-bem-ing-with-sass-33">Even Easier BEMing With Sass</a>
+            </li>
+          </ul>
+        </section>
+
+			</div>
+
+		</div>
+
+		<script src="./js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				transitionSpeed: 'fast',
+			    transition: 'fade', // none/fade/slide/convex/concave/zoom
+			    history: false,
+
+			});
+
+		</script>
+
+	</body>
+</html>
