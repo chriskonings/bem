@@ -1,7 +1,7 @@
-#fed-speaking--bem
+#BEM
 A talk on the BEM naming convention.
 
-##[GitHub Pages Link](https://pages.github.ibm.com/CIngham/fed-speaking--bem/)
+##[GitHub Pages Link](https://pages.github.com/CIngham/bem/)
 
 ##This presentation was made with [Reveal.js](http://lab.hakim.se/reveal-js/)
 
